@@ -1,1 +1,1 @@
-git push 너무 어렵
+git push 너무 어렵다.
