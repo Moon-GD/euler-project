@@ -15,7 +15,7 @@ int main()
 {
 	long long n = 600851475143, i;
 
-	for (i = 2; i<= n; i++)
+	for (i = 2; i <= n; i++)
 	{
 		if (n % i == 0)								 // i가 주어진 수의 약수일때
 		{

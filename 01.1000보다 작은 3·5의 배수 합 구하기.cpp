@@ -12,7 +12,7 @@ int main()
 		}
 	}
 
-	printf("гую╨ : %d", sum);
+	printf("sum : %d", sum);
 
 	return 0;
 }

@@ -3,17 +3,17 @@
 int main()
 {
 	int i = 1;
-	int j, k, num=0, count=0;
+	int j, k, num = 0, count = 0;
 
 	while (1)
 	{
-		num=0, count = 0, i++;
+		num = 0, count = 0, i++;
 		for (j = 1; j <= i; j++)
 		{
 			num += j;
 		}
 
-		for (k = 1; k*k <= num; k++)
+		for (k = 1; k * k <= num; k++)
 		{
 			if (num % k == 0)
 			{

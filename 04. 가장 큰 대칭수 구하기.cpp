@@ -25,6 +25,6 @@ int main()
 			}
 		}
 	}
-	EXIT:
+EXIT:
 	return 0;
 }

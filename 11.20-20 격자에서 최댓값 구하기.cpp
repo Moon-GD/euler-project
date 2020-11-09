@@ -3,7 +3,7 @@
 #include<stdlib.h>
 int main()
 {
-	char arr[grid + 1][grid * 2 +1] = {
+	char arr[grid + 1][grid * 2 + 1] = {
 "0802229738150040007504050778521250779108",
 "4949994017811857608717409843694804566200",
 "8149317355791429937140675388300349133665",
@@ -25,17 +25,17 @@ int main()
 "2073352978319001743149714886811623570554",
 "0170547183515469169233486143520189196748"
 	};
-	int num[grid * grid+ 2];
+	int num[grid * grid + 2];
 	int i, j;
 	for (i = 0; i < 20; i++)
 	{
-		for (j = 0; j < 40; j+=2)
+		for (j = 0; j < 40; j += 2)
 		{
-			num[1+20*i+j/2] = (arr[i][j] - '0') * 10 + (arr[i][j + 1]-'0');
+			num[1 + 20 * i + j / 2] = (arr[i][j] - '0') * 10 + (arr[i][j + 1] - '0');
 		}
 	}
-	int row_product=1, column_product=1, cross_product=1;
-	int row_max = 0, flag=0;
+	int row_product = 1, column_product = 1, cross_product = 1;
+	int row_max = 0, flag = 0;
 
 	for (i = 1; i < grid * grid + 1; i++) // 가로 최댓값 구하기
 	{
@@ -71,7 +71,7 @@ int main()
 	{
 		for (i = 1; i <= 17; i++)
 		{
-			cross_product = num[80 * j + i+3] * num[80 * j + i + 22] * num[80 * j + i + 41] * num[80 * j + i + 60];
+			cross_product = num[80 * j + i + 3] * num[80 * j + i + 22] * num[80 * j + i + 41] * num[80 * j + i + 60];
 			if (cross_max2 < cross_product) { cross_max2 = cross_product; }
 		}
 	}
