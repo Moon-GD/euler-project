@@ -1,0 +1,9 @@
+C:\Users\문경덕\Desktop\C언어\source\repos\Euler_Project\Euler_Project
+
+1. cd 디렉터리 주소
+2. git status
+3. git commit -m "변경 사항에 관한 이름"
+4. (생략가능)
+ git remote add origin <github 주소>
+ git remote -v <연결 확인>
+5. git push : 업데이트
