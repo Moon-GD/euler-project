@@ -1,2 +1,4 @@
-﻿  01.1000보다 작은 3·5의 배수 합 구하기.cpp
-  Euler_Project.vcxproj -> C:\Users\문경덕\Desktop\C언어\source\repos\Euler_Project\x64\Debug\Euler_Project.exe
+﻿  29.pow(a,b)의 개수 구하기.cpp
+C:\Users\문경덕\Desktop\C언어\source\repos\Euler_Project\Euler_Project\29.pow(a,b)의 개수 구하기.cpp(41,23): error C2440: '초기화 중': 'int [100][100][26]'에서 'int ***'(으)로 변환할 수 없습니다.
+C:\Users\문경덕\Desktop\C언어\source\repos\Euler_Project\Euler_Project\29.pow(a,b)의 개수 구하기.cpp(41,16): message : 가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 함수 스타일 캐스트가 필요합니다.
+C:\Users\문경덕\Desktop\C언어\source\repos\Euler_Project\Euler_Project\29.pow(a,b)의 개수 구하기.cpp(47,31): error C3863: 배열 형식 'int [26]'은(는) 할당할 수 없습니다.
