@@ -116,7 +116,9 @@
     <ClCompile Include="28. 1001-1001 격자의 대각선의 합 구하기.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="29.pow(a,b)의 개수 구하기.cpp" />
+    <ClCompile Include="29.pow(a,b)의 개수 구하기.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="보완사항.txt" />

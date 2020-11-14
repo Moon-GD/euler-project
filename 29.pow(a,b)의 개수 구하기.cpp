@@ -1,54 +1,38 @@
 #include<stdio.h>
-
-int isPrime(int i)
+#include<math.h> // pow
+#include<stdbool.h> // bool
+bool num[700] = { false };
+int main() // 2^60 = 4^30 = 8^20 = … 이런 식으로 중복이 있는 수를 제외하고 세어주면 된다.
 {
-	for (int j = 2; j < i; j++)
-	{
-		if (i % j == 0)
-			return 0;
-	}
-
-	return 1;
-}
-
-int main()
-{
-	int prime[25 + 1] = { 0 }; //소수 25 개
-	int num[100][25 + 1] = { 0 };
-	int i, j = 0;
-	for (i = 2; i < 100; i++) //소수 찾기
-	{
-		if (isPrime(i) == 1)
-		{
-			prime[j++] = i;
-		}
-	}
-
-	for (i = 2; i < 100; i++) // 2~100까지의 수를(a) 인수의 곱으로 표현
-	{
-		int x = i;
-		for (j = 0; j < 25; j++)
-		{
-			while (x % prime[j] == 0)
-			{
-				num[i][j] ++;
-				x /= prime[j];
-			}
-		}
-	}
-
-	int array[100][100][25 + 1]; // array[a][b][인수의 곱으로 표현]
-	int*** parray = array;
-
-	for (i = 2; i <= 100; i++)
-	{
-		for (j = 2; j <= 100; j++)
-		{
-			array[i][j] = j * num[i][j];
-		}
-	}
-
-
-
-	return 0;
+    int a = 2, x; // a : 밑,  x : 지수 변수
+    int cnt = 81 * 99; 
+    /* cnt : 주어진 범위 내에서 중복이 없는 수들의 개수를 더해주고 시작
+    즉, a가 (2,4,8,16,32,64, 3,9,27, 5,25, 6,36, 7,49, 10,100) 인 경우를 제외한 모든 경우 */
+    while (a <= 10) // a가 11보다 커지면 중복되는 경우는 없으니 고려하지 않는다.
+    {
+        x = 1;
+        if (a == 4 || a == 8 || a == 9) // 각각 a=2, a=3 인 경우에서 개수가 세어졌기 때문에 제외한다.
+        {
+            a++; continue;
+        }
+        while (pow(a, x) <= 100) { x++; }
+        x--; // 한 번 더 더해지기 때문에 1만큼 빼준다.
+        int i, j; // 제어문 변수
+        for (i = 1; i <= x; i++)
+        {
+            for (j = 2 * i; j <= i * 100; j += i)
+            {
+                num[j] = true;
+            }
+        }
+        
+        for (i = 1; i <= x * 100; i++)
+        {
+            if (num[i] == true)
+                cnt++;
+            num[i] = false; // 배열 초기화
+        }
+        a++;
+    }
+    printf("총 개수 : %d", cnt);
 }
