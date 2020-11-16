@@ -7,3 +7,5 @@ C:\Users\문경덕\Desktop\C언어\source\repos\Euler_Project\Euler_Project
  git remote add origin <github 주소>
  git remote -v <연결 확인>
 5. git push : 업데이트
+
+경덕 열심히 좀 하자. 집에 와서 게임 좀 그만하고 ㄱ-
