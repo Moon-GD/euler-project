@@ -120,6 +120,9 @@
     <ClCompile Include="36.2진법과 10진법이 모두 대칭수인 수 찾기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="32. 1~9 팬디지털의 합 구하기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="보완사항.txt" />
