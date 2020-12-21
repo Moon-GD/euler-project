@@ -144,6 +144,12 @@
     <ClCompile Include="43.특정 규칙을 가진 0~9 팬디지털 구하기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="44.합과 차가 오각수인 오각수들의 최소 합 구하기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="45.오각수이면서 육각수인 삼각수.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="보완사항.txt" />
