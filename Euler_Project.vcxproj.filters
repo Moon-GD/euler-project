@@ -150,6 +150,15 @@
     <ClCompile Include="45.오각수이면서 육각수인 삼각수.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="46.골드바흐의 추측 반증하기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="47.서로 다른 소인수 4개를 가지는 연속하는 네 개의 수 구하기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="48.Self Power 합 구하기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="보완사항.txt" />
