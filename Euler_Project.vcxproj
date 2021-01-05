@@ -176,6 +176,7 @@
     <ClCompile Include="48.Self Power 합 구하기.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="49.세 항이 소수이면서  다른 수의 순열이 되는 4자리 수의 등차수열 찾기.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="보완사항.txt" />
