@@ -1,9 +1,23 @@
 #include<stdio.h>
 #include<math.h> // sqrt
 int array[11] = { 0,1,2,3,4,5,6,7,8,9 };
-int target[600] = { 0 };
 
-int isPrime(int i) {
+int target[600] = { 0 }; // Permutation(10,4)에서 소수 배열
+int i = 0; // Permutation(10,4)에서 소수 배열의 지표
+
+int divide(int a, int b, int c) {
+	int A[5] = { 0 }, B[5] = { 0 }, C[5] = { 0 };
+	int j = 0;
+	for (int i = 1; i <= 4; i++) {
+		A[j] = a % 10, a /= 10;
+		B[j] = b % 10, b /= 10;
+		C[j] = c % 10, c /= 10;
+		j++;
+	}
+
+}
+
+int isPrime(int i) { // 소수 판별
 	for (int j = 2; j <= sqrt(i); j++) {
 		if (i % j == 0) {
 			return 0;
@@ -25,19 +39,12 @@ void Permutation(int n, int r, int depth)
 		if (isPrime(sum)) {
 			if (sum < 1000)
 				return;
-			int i = 0;
-			while (1) {
-				if (target[i] == 0) {
-					target[i] = sum;
-					break;
-				}
-				else {
-					i++;
-				}
-			}
+
+			target[i++] = sum;
 		}
 		return;
 	}
+
 
 	for (int i = depth; i < n; i++) {
 		swap(&array[i], &array[depth]);
@@ -58,22 +65,12 @@ int main()
 
 	for (int a = 0; a <= 507; a++) {
 		for (int c = a + 2; c <= 509; c++) {
-			for (int b = a + 1; b <= 508; b++) {
-				//세 수의 대소 비교
-				int max = 0, min = 0;
-				if (target[a] > target[b]) {
-					max = target[a];
-					min = target[b];
-				}
-				else { 
-					max = target[b];
-					min = target[a];
-				}
-				if (target[c] > max) { max = target[c]; }
-				if (target[c] < min) { min = target[c]; }
-
-				if (target[a] + target[b] + target[c] == 3 / 2 * (max + min)) {
-					printf("%d %d %d\n", min, (max + min) / 2, max);
+			for (int b = a + 1; b < c; b++) {
+				if (target[a] + target[b] + target[c] == 3 * target[a] || 
+					target[a] + target[b] + target[c] == 3 * target[b] ||
+					target[a] + target[b] + target[c] == 3 * target[c]) {
+					int p_array[10];
+					printf("%d 번째 %d %d %d\n", a+1 , target[a], target[b], target[c]);
 				}
 			}
 		}
