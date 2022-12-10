@@ -13,7 +13,7 @@
 <br>
 
 # 3. Contributor 👨‍👩‍👦‍👦
-<a href="https://github.com/moon-gd">문경덕</a>
+<a href="https://github.com/moon-gd" target='_blank'>문경덕</a>
 
 <br>
 
